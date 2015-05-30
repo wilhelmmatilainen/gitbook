@@ -3,7 +3,7 @@
 {% block title %}{{ progress.current.title }} | {{ title }}{% endblock %}
 
 {% block style %}
-    {% if options.bare is undefined %}
+    {% if not options.bare %}
     <link rel="stylesheet" href="{{ staticBase }}/print.css">
     {% endif  %}
     {% for resource in plugins.resources.css %}
